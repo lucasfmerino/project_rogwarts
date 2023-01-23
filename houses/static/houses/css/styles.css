@@ -21,19 +21,12 @@ body {
     font-size: 1.6rem;
     font-family: var(--font-primary);
     color: var(--color-dark-text);
-}
-
-.main-background {
     background-image: url(../images/background2.jpg);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    z-index: -2;
     transition: 1s all ease-in-out;
-    background-size: 100%;
+    z-index: -6;
 }
 
-.main-background::after {
+body::after {
     content: "";
     position: absolute;
     top: 0;
