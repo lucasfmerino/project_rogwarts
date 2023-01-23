@@ -127,3 +127,9 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Arquivos Pessoais
+gryffindor.html
+hufflepuff.html
+ravenclaw.html
+slytherin.html
