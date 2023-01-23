@@ -1,0 +1,45 @@
+@media (max-width: 1200px) {
+
+
+    .main-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        height: auto;
+    }
+    
+    .main-header a {
+        font-size: 40px;
+    }
+    
+    .house-card {
+        position: relative;
+        margin: 10px;
+        height: 260px;
+        width: 170px;
+        perspective: 750px;
+    }
+
+    .house-image {
+        width: 170px;
+        height: 260px;
+    }
+
+    .footer-container{
+        justify-content: center;
+        height: 120px
+    }
+
+    .footer-text {
+        font-size: 18px;
+        padding: 10px;
+
+    }
+
+}
+
+@media (max-width: 800px) {
+
+    .main-background {
+        height: 1500px;
+    }
+}

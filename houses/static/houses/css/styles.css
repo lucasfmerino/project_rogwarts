@@ -1,3 +1,4 @@
+
 :root {
     --font-primary: sans-serif;
     --font-headings: 'Roboto Slab', serif;
@@ -9,7 +10,7 @@
 * {
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
+    border: 0;
 }
 
 html {
@@ -20,15 +21,16 @@ body {
     font-size: 1.6rem;
     font-family: var(--font-primary);
     color: var(--color-dark-text);
-    background-color: aquamarine;
 }
 
 .main-background {
-    background-image: url(../images/background.jpg);
+    background-image: url(../images/background2.jpg);
     width: 100%;
     height: 100%;
     position: absolute;
-    z-index: -6;
+    z-index: -2;
+    transition: 1s all ease-in-out;
+    background-size: 100%;
 }
 
 .main-background::after {
@@ -39,8 +41,8 @@ body {
     width: 100vw;
     height: 100vh;
     background: linear-gradient(90deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0.8) 50%, rgba(0,0,0,1) 100%);
-    z-index: -5;
-    opacity: 85%;
+    z-index: -1;
+    opacity: 65%;
 }
 
 h1,
@@ -56,9 +58,14 @@ h6 {
     max-width: 100%;
     margin: 0 auto;
     padding: var(--spacing-gutter-medium);
-    background-color: black;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 100%);
     display: flex;
     justify-content: center;
+    opacity: 90%;
+}
+
+.hog-logo {
+    width: 70px;
 }
 
 .main-header {
@@ -66,13 +73,146 @@ h6 {
     align-items: center;
 }
 
-.hog-logo {
-    width: 70px;
-
-}
-
 .main-header a {
     text-decoration: none;
     color: rgb(211, 201, 142);
     padding: 0 30px;
+    height: 50px;
+    font-size: 64px;
 }
+
+.main-container {
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.house-card {
+    position: relative;
+    margin: 10px;
+    height: 365px;
+    width: 260px;
+    perspective: 750px;
+}
+
+
+.house-card:hover .flip{
+    transform: rotateY(180deg);
+}
+
+.flip {
+    transition: transform 0.8s ease-in-out;
+    transform-style: preserve-3d;
+}
+
+
+.front, .back {
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.back {
+    transform: rotateY(180deg);
+}
+
+.house-image {
+    width: 260px;
+    height: 365px;
+    border-radius: 15px;
+    box-shadow: 0 0 8px 0 rgba(0,0,0, 0.3);
+}
+
+.grifindor-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.grifindor:hover + .grifindor-background{
+    background-image: url(../images/bg-g.jpg);
+    opacity: 1;
+    background-size: 800px;
+}
+
+.ravenclaw-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.ravenclaw:hover + .ravenclaw-background{
+    background-image: url(../images/bg-c.jpg);
+    opacity: 1;
+    background-size: 800px;
+}
+
+.hufflepuff-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.hufflepuff:hover + .hufflepuff-background{
+    background-image: url(../images/bg-h.jpg);
+    opacity: 1;
+    background-size: 800px;
+}
+
+.slytherin-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+    transition: 1s all ease-in-out;
+}
+
+.slytherin:hover + .slytherin-background{
+    background-image: url(../images/bg-s.jpg);
+    opacity: 1;
+    background-size: 800px;
+}
+
+.division {
+    height: 20px;
+    width: 100%;
+    background-color: black;
+}
+
+.footer-container {
+    background-image: url(../images/background.jpg);
+    background-size: 25%;
+    height: calc(80vh - 900px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-text {
+    width: 100%;
+    font-family: var(--font-headings);
+    background-color: rgb(0, 0, 0);
+    font-size: 36px;
+    color: rgb(211, 201, 142);
+    text-align: center;
+    padding:20px;
+}
+
